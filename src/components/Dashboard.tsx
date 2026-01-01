@@ -130,7 +130,7 @@ export const Dashboard: React.FC = () => {
               </div>
               <div>
                 <h1 className="text-2xl font-bold text-gray-900">Inventario</h1>
-                <p className="text-sm text-gray-500">Sistema de gestión de productos</p>
+                <p className="text-sm text-gray-500">Sistema de gestión de productos rafitaUTN </p>
               </div>
             </div>
             
