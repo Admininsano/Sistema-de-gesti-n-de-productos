@@ -1,33 +1,135 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Dashboard Inventario Web 🎯
 
-## Getting Started
+Sistema de gestión de inventario de productos moderno y elegante construido con Next.js 16, React 19, TypeScript, Tailwind CSS y Firebase Realtime Database.
 
-First, run the development server:
+## ✨ Características
 
+- ✅ **CRUD Completo** de productos
+- 🔥 **Firebase Realtime Database** - Sincronización en tiempo real
+- 🎨 **UI Moderna** - Diseño limpio con Tailwind CSS
+- 📊 **Dashboard con Estadísticas** - Resumen visual del inventario
+- 🔍 **Búsqueda en tiempo real** - Filtrado instantáneo de productos
+- 📱 **Diseño Responsive** - Funciona en móviles, tablets y desktop
+- 🎯 **Dos vistas** - Tabla y Grid view
+- ⚡ **TypeScript** - Tipado estático para mayor seguridad
+- 🎭 **Componentes reutilizables** - Arquitectura modular
+- 🔔 **Alertas de stock** - Indicadores de stock bajo y sin stock
+
+## 🚀 Tecnologías
+
+- **Framework**: Next.js 16 (App Router)
+- **UI Library**: React 19
+- **Lenguaje**: TypeScript
+- **Estilos**: Tailwind CSS 4
+- **Base de Datos**: Firebase Realtime Database
+- **Linting**: ESLint
+
+## 🛠️ Instalación y Uso
+
+### 1. Instalar dependencias
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 2. Configurar Firebase
+Las credenciales ya están en `.env.local`. Si necesitas cambiarlas, edita ese archivo.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 3. Ejecutar en modo desarrollo
+```bash
+npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Abre [http://localhost:3000](http://localhost:3000) en tu navegador.
 
-## Learn More
+## 📦 Scripts Disponibles
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npm run dev      # Inicia servidor de desarrollo
+npm run build    # Compila para producción
+npm start        # Ejecuta versión de producción
+npm run lint     # Ejecuta ESLint
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📁 Estructura del Proyecto
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```
+inventario-web/
+├── app/                    # App Router de Next.js
+├── src/
+│   ├── components/         # Componentes React
+│   │   ├── common/         # Button, Input, Modal, Card, etc.
+│   │   ├── layout/         # Header, Footer, Sidebar
+│   │   └── inventory/      # ProductForm, ProductTable, ProductGrid
+│   ├── services/           # Lógica de negocio (Firebase)
+│   ├── lib/                # Configuración Firebase
+│   ├── types/              # TypeScript interfaces
+│   └── utils/              # Funciones auxiliares
+└── public/                 # Archivos estáticos
+```
+
+## 🎨 Componentes Principales
+
+### Dashboard
+- Estadísticas en tiempo real
+- Búsqueda de productos
+- Vista tabla/grid
+- CRUD completo
+
+### ProductForm
+- Validación de campos
+- Categorías predefinidas
+- Soporte para imágenes
+
+### ProductTable / ProductGrid
+- Vista de tabla detallada
+- Vista de tarjetas visual
+- Badges de estado
+- Acciones rápidas
+
+## 📊 Estructura de Datos
+
+```typescript
+interface Product {
+  id?: string;
+  name: string;
+  description: string;
+  quantity: number;
+  price: number;
+  category: string;
+  imageUrl?: string;
+  createdAt?: number;
+  updatedAt?: number;
+}
+```
+
+## 🔥 Firebase Realtime Database
+
+Los datos se sincronizan automáticamente en tiempo real. La estructura en Firebase es:
+
+```
+/products
+  /-Abc123
+    name: "Producto 1"
+    description: "..."
+    price: 100
+    quantity: 50
+    category: "Electrónica"
+```
+
+## 🎯 Categorías Disponibles
+
+- Electrónica
+- Ropa
+- Alimentos
+- Hogar
+- Deportes
+- Libros
+- Juguetes
+- Otros
+
+---
+
+Desarrollado con ❤️ usando Next.js y Firebase
 
 ## Deploy on Vercel
 
