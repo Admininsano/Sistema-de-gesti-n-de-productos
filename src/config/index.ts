@@ -10,6 +10,10 @@ export const CONFIG = {
   FIREBASE_APP_ID: process.env.NEXT_PUBLIC_FIREBASE_APP_ID || '',
   FIREBASE_MEASUREMENT_ID: process.env.NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID || '',
 
+  // Supabase (opcional, mantenido para compatibilidad)
+  SUPABASE_URL: process.env.NEXT_PUBLIC_SUPABASE_URL || '',
+  SUPABASE_KEY: process.env.NEXT_PUBLIC_SUPABASE_KEY || '',
+
   // Aplicación
   APP_NAME: 'Inventario Web',
   APP_VERSION: '0.1.0',
